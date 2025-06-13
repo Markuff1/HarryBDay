@@ -1,4 +1,5 @@
 import React, { useEffect, useState, type FormEvent } from "react";
+import Ben from "../public/Ben.png";
 import confetti from "canvas-confetti";
 import { motion } from "framer-motion";
 import "./App.scss";
@@ -102,8 +103,8 @@ const App: React.FC = () => {
 
           {question.image && (
             <img
-              src={question.image}
-              alt="Question visual"
+              src={Ben}
+              alt="It's an image of Ben if it doens't load"
               className="question-image"
             />
           )}
