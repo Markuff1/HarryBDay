@@ -7,7 +7,7 @@ import { QUESTIONS } from "./questions";
 import Countdown from "./Countdown";
 
 const GIFT_CARDS = ["Amazon", "Xbox", "Spotify","One for all (If you're gay)", "Other","I JUST WANT CASH"];
-const BIRTHDAY_DATE = new Date("2025-06-13T00:00:00");
+const BIRTHDAY_DATE = new Date("2025-06-14T00:00:00");
 
 const App: React.FC = () => {
   const [currentQ, setCurrentQ] = useState(0);
