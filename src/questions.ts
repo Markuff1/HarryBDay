@@ -38,7 +38,7 @@ export const QUESTIONS: Question[] = [
   {
     type: "text",
     text: "Who is this?",
-    image: "/IMG_1750.JPEG",
+    image: "/Ben.png",
   },
 {
     type: "text",
