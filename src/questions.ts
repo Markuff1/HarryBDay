@@ -1,81 +1,65 @@
-export type QuestionType = "text" | "multiple-choice" | "audio"; // <-- must include "audio"
+// src/questions.ts
+
+export type QuestionType = "text" | "multiple-choice" | "audio";
 
 export interface Question {
   type: QuestionType;
   text: string;
   image?: string;
+  audio?: string;
   choices?: string[];
+  correctAnswers?: string[]; // Add this
 }
 
+
 export const QUESTIONS: Question[] = [
-    {
+  {
     type: "multiple-choice",
-    text: "Happy Birthday!!!!!!!! - Now before you get a gift I need to know some things like - Who are you?",
-    choices: ["Ben","Aaron","Mark","Harry","George","Harvey"],
+    text: "Who are you?",
+    choices: ["Ben", "Aaron", "Mark", "Harry", "George", "Harvey"],
+    correctAnswers: ["Harry"],
   },
   {
     type: "text",
-    text: "When is your birthday",
-  },
-    {
-    type: "text",
-    text: "What did you get for your Birthday?",
-  },
-{
-    type: "text",
-    text: "Doing anything exciting?",
+    text: "When is your birthday?",
+    correctAnswers: ["Today","June 14th"],
   },
   {
-    type: "multiple-choice",
-    text: "Now before you get a gift, a few questions - What is my dog called?",
-    choices: ["Oban","Jerome","N*","No"],
-  },
-    {
-    type: "multiple-choice",
-    text: "What about my pet fish",
-    choices: ["Norman","Nemo","Ben","Muhammad the great fish", "I don't have one?"],
+    type: "audio",
+    text: "Speical Message from this Man - Who is this?",
+    audio: "/gordon-ramsay.wav",
+    correctAnswers: ["gordon ramsay","gordon","ramsay","Gordon Ramsay", "Gordon ramsay","gordon Ramsay"],
   },
   {
     type: "text",
-    text: "Who is this?",
+    text: "Who is this Man/Woman/it?",
     image: "/Ben.png",
-  },
-{
-    type: "text",
-    text: "What is your alarm code?",
-  },
-  {
-    type: "text",
-    text: "What about Sort code and Account Number as well as the numbers on the back?",
+    correctAnswers: ["Ben"],
   },
   {
     type: "multiple-choice",
-    text: "Now do you want your gift?",
+    text: "Now do you want your present?",
     choices: ["Yes","No"],
+    correctAnswers: ["Yes"],    
+  },
+  {
+    type: "multiple-choice",
+    text: "are you sure? - I think only if you say 2K is the best",
+    choices: ["WWE 2K25 IS THE BEST GAME","Resident evil is SHIT"],
+    correctAnswers: ["WWE 2K25 IS THE BEST GAME","Resident evil is SHIT"],
   },
     {
     type: "multiple-choice",
-    text: "Are you sure?",
+    text: "Sooooooooooo do you want your gift now?",
     choices: ["Yes","No"],
+    correctAnswers: ["Yes"],
   },
-    {
+
+  {
     type: "multiple-choice",
     text: "Are you sure?",
     choices: ["Yes","No"],
+    correctAnswers: ["Yes"],
   },
-{
-    type: "multiple-choice",
-    text: "Ok fine - Are you 100% sure though?",
-    choices: ["Yes","No"],
-  },
-{
-    type: "multiple-choice",
-    text: "Well are you 10000% sure though?",
-    choices: ["Yes","No"],
-  },
-{
-    type: "multiple-choice",
-    text: "Ok fine but are you 100000000% sure though?",
-    choices: ["Yes","No"],
-  },
+   
 ];
