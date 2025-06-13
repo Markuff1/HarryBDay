@@ -1,9 +1,8 @@
-import React, { useEffect, useState, FormEvent } from "react";
+import React, { useEffect, useState, type FormEvent } from "react";
 import confetti from "canvas-confetti";
 import { motion } from "framer-motion";
 import "./App.scss";
 import { QUESTIONS } from "./questions";
-import type { Question } from "./questions";
 import Countdown from "./Countdown";
 
 const GIFT_CARDS = ["Amazon", "Xbox", "Spotify","One for all (If you're gay)", "Other","I JUST WANT CASH"];
