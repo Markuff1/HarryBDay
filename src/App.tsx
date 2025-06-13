@@ -2,13 +2,13 @@ import React, { useEffect, useState, type FormEvent, useRef } from "react";
 import confetti from "canvas-confetti";
 import { motion } from "framer-motion";
 import "./App.scss";
-import { QUESTIONS, type Question } from "./questions";
+import { QUESTIONS} from "./questions";
 import Countdown from "./Countdown";
 import ben from "../src/Ben.png";
 import gordon from "../src/gordon-ramsayV2.wav";
 
 const GIFT_CARDS = ["Amazon", "Xbox", "Spotify", "One for all (If you're gay)", "Other", "I JUST WANT CASH"];
-const BIRTHDAY_DATE = new Date("2025-06-13T00:00:00");
+const BIRTHDAY_DATE = new Date("2025-06-14T00:00:00");
 
 const App: React.FC = () => {
   const [currentQ, setCurrentQ] = useState(0);
