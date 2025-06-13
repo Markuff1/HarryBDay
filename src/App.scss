@@ -1,0 +1,162 @@
+body {
+  margin: 0;
+  background: url('/Harry.JPEG') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.app-container {
+  max-width: 800px;
+  margin: 4rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+h1 {
+  color: #3b82f6; // blue-500
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  border: 2px solid #93c5fd; // blue-300
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #3b82f6; // blue-500
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #2563eb; // blue-600
+}
+
+.Harry{
+    width: 5%;
+    border-radius: 12px;
+    margin: 1rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.question-image {
+  width: 25%;
+  border-radius: 12px;
+  margin: 1rem 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.choices {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.choices label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+  width: 80px; // fixed width for consistent sizing
+}
+
+.choices input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 48px;
+  height: 48px;
+  border: 3px solid #3b82f6; // blue border
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  position: relative;
+  background-color: white;
+  transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.choices input[type="radio"]:hover {
+  box-shadow: 0 0 8px 3px rgba(59, 130, 246, 0.5); // glow blue on hover
+  border-color: #2563eb;
+}
+
+.choices input[type="radio"]:checked {
+  background-color: #3b82f6;
+  border-color: #2563eb;
+}
+
+.choices input[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 28px;
+  height: 28px;
+  background: white;
+  border-radius: 4px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .app-container {
+    margin: 1rem 0.5rem;
+    padding: 1.5rem;
+    border-radius: 15px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  input,
+  select {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .choices {
+    gap: 1rem;
+  }
+
+  .choices label {
+    width: 60px;  // smaller width on mobile
+    font-size: 0.85rem;
+  }
+
+  .choices input[type="radio"] {
+    width: 40px;
+    height: 40px;
+    border-width: 2.5px;
+  }
+
+  .choices input[type="radio"]:checked::after {
+    top: 8px;
+    left: 8px;
+    width: 20px;
+    height: 20px;
+  }
+}
